@@ -19,7 +19,7 @@ class EventsController < ApplicationController
   def edit
   end
 
-  # POST /events or /events.json
+  # POST /events inicializo o objeto e passo o parametro com os campos permitidos do registro.
   def create
     @event = Event.new(event_params)
 
@@ -53,13 +53,13 @@ class EventsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def event_params
-      params.require(:event).permit(:name, :description, :started_at, :finished_at)
-    end
+  # Passo o nome do Model e os Campos que eu quero permitir por segurança.
+  def event_params
+    params.require(:event).permit(:name, :description, :started_at, :finished_at)
+  end
 end
