@@ -4,6 +4,7 @@ class Event < ApplicationRecord
   validates :started_at, presence: true
   validates :finished_at, presence: true
   validate :validate_if_starts_in_the_future, on: :create
+  validate :validate_if_finished_at_is_after_started_at
 
   private
 
