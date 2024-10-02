@@ -60,6 +60,6 @@ class EventsController < ApplicationController
 
   # Passo o nome do Model e os Campos que eu quero permitir por segurança.
   def event_params
-    params.require(:event).permit(:name, :description, :started_at, :finished_at)
+    params.require(:event).permit(:name, :category_id, :description, :started_at, :finished_at)
   end
 end

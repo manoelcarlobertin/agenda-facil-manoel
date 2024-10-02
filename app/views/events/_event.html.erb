@@ -5,6 +5,11 @@
   </p>
 
   <p>
+  <strong>Category:</strong>
+  <%= event.category&.name if event.category.present? %>
+</p>
+
+  <p>
     <strong>Description:</strong>
     <%= event.description %>
   </p>
