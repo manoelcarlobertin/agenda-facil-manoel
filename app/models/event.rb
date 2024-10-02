@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
-  belongs_to :category
+  # optional: true é necessário pq o evento pode não ter categoria, eu já havia cadastrado 2 sem categoria.
+  belongs_to :category, optional: true
 
 
   validates :name, presence: true, length: { minimum: 2, maximum: 200, allow_blank: true }
