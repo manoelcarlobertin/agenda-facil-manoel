@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  # enum status: { active: "active", revoved: "removed" }
+  enum status: { active: "active", revoved: "removed" }
 
   # optional: true é necessário pq o evento pode não ter categoria, eu já havia cadastrado 2 sem categoria.
   belongs_to :category, optional: true
