@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :categories
+  resources :categories # , except: [ :show ]
   resources :events
   resource :dashboard, only: :show
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
