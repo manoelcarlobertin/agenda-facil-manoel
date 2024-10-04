@@ -24,9 +24,19 @@
         <strong>Finished at:</strong>
         <%= event.finished_at %>
       </p>
+      <p>
+        <%# if event.file.attached? %>
+          <%#= link_to "Baixar Anexo", rails_blob_path(event.file, disposition: "attachment"), class: "btn btn-secondary", target: :blank %>
+        <%# end %>
+      </p>
+      <%# if event.file.attached? %>
+        <%#= form.input :file %>
+        <%#= link_to "Baixar Anexo", event.file, class: "btn btn-secondary", target: :blank %>
+      <%# end %>
+    </div>
+  </div>
       <div class="card-footer d-flex justify-content-between">
         <%= link_to "Editar", edit_event_path(event), class: "btn btn-primary" %>
         <%= button_to "Remover", event_path(event), method: :delete, class: "btn btn-danger", data: { turbo_confirm: "Você tem certeza?" } %>
       </div>
-  </div>
 </div>
