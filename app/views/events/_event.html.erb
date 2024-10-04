@@ -1,27 +1,32 @@
-<div id="<%= dom_id event %>">
-  <p>
-    <strong>Name:</strong>
-    <%= event.name %>
-  </p>
+<div class="card">
+  <div class="card-body">
+      <p>
+        <strong>Name:</strong>
+        <%= event.name %>
+      </p>
 
-  <p>
-  <strong>Category:</strong>
-  <%= event.category&.name if event.category.present? %>
-</p>
+      <p>
+      <strong>Category:</strong>
+      <%= event.category&.name if event.category.present? %>
+    </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= event.description %>
-  </p>
+      <p>
+        <strong>Description:</strong>
+        <%= event.description %>
+      </p>
 
-  <p>
-    <strong>Started at:</strong>
-    <%= event.started_at %>
-  </p>
+      <p>
+        <strong>Started at:</strong>
+        <%= event.started_at %>
+      </p>
 
-  <p>
-    <strong>Finished at:</strong>
-    <%= event.finished_at %>
-  </p>
-
+      <p>
+        <strong>Finished at:</strong>
+        <%= event.finished_at %>
+      </p>
+      <div class="card-footer d-flex justify-content-between">
+        <%= link_to "Editar", edit_event_path(event), class: "btn btn-primary" %>
+        <%= button_to "Remover", event_path(event), method: :delete, class: "btn btn-danger", data: { turbo_confirm: "Você tem certeza?" } %>
+      </div>
+  </div>
 </div>

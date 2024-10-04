@@ -1,16 +1,25 @@
 <p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Events" %>
-
-<h1>Events</h1>
-
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
-  <% end %>
+<div class="card-footer d-flex justify-content-between">
+    <h4 class="flex-grow-1">Eventos</h4>
+    <div>
+      <%= link_to "Novo Evento", new_event_path, class: "btn btn-primary" %>
+    </div>
 </div>
 
-<%= link_to "New event", new_event_path %>
+<%# content_for :title, "Eventos" %>
+<!--div class="card-footer d-flex justify-content-between">
+  <h1>Eventos</h1>
+
+  <div id="events">
+    <% @events.each do |event| %>
+      <%#= render event %>
+    <% end %>
+  </div>
+</div-->
+
+<div class="w-100 d-flex flex-column gap-4">
+  <%= render @events %>
+  <br>
+  <%#= link_to "New event", new_event_path %>
+</div>
+
