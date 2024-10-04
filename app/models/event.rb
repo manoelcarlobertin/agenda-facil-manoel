@@ -12,6 +12,7 @@ class Event < ApplicationRecord
   validate :validate_if_finished_at_is_after_started_at
 
   has_one_attached :file
+  has_rich_text :description
 
   private
 

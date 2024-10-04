@@ -21,10 +21,10 @@
       <%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category" %>
     </div>
 
-    <div>
-      <%= form.label :description, style: "display: block" %>
-      <%= form.text_area :description %>
-    </div>
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.rich_text_area :description %>
+  </div>
 
     <div>
       <%= form.label :started_at, style: "display: block" %>
