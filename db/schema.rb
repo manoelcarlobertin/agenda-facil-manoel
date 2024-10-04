@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_04_212457) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_04_222927) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -62,7 +62,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_04_212457) do
 
   create_table "events", force: :cascade do |t|
     t.string "name", limit: 100
-    t.text "description"
     t.datetime "started_at", precision: nil
     t.datetime "finished_at", precision: nil
     t.datetime "created_at", null: false
