@@ -13,6 +13,8 @@
     </div>
   </div>
 
-    <div class="d-flex justify-content-end">
-    </div>
+  <div class="card-footer">
+    <%= link_to "Editar", edit_category_path(category), class: "btn btn-primary" %>
+    <%= link_to "Excluir", category, data: { turbo_method: :delete, turbo_confirm: "Você tem certeza?" }, class: "btn btn-danger" %>
+  </div>
 </div>

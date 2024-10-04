@@ -1,16 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Categories" %>
+<%= link_to "Nova", new_category_path, class: "btn btn-primary" %>
+<div class="w-100 d-flex flex-column gap-3">
+  <h6 class="flex-grow-1">Categorias</h6>
 
-<h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+  <div id="categories">
+    <% @categories.each do |category| %>
+      <%= render category %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New category", new_category_path %>
