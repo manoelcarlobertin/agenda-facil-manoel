@@ -36,8 +36,9 @@
       <%= form.datetime_field :finished_at, html5: true %>
     </div>
     <div>
-
+      <%= form.label :file, "Anexar arquivo" %>
+      <%= form.file_field :file %>
     <div>
-      <%= form.submit %>
+      <%= form.submit "Salvar", class: "btn btn-primary" %>
     </div>
   <% end %>
