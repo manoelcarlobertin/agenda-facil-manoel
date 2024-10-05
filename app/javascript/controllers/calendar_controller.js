@@ -18,14 +18,21 @@ export default class extends Controller {
 
     this.calendar = new Calendar(this.containerTarget, {
       plugins: [dayGridPlugin],
+      initialView: 'dayGridMonth',
       headerToolbar: {
         left: "prev,next today",
         center: "title",
         right: "",
       },
-      events,
+      events: this.eventsValue, // Usa os eventos passados pela variável do Rails
     });
 
-    this.calendar.render();
+    this.calendar.render(); // Renderiza o calendário na tela
+  }
+
+  disconnect() {
+    if (this.calendar) {
+      this.calendar.destroy() // Limpa o calendário ao desconectar o controller
+    }
   }
 }

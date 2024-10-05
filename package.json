@@ -2,6 +2,8 @@
   "name": "app",
   "private": "true",
   "dependencies": {
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
     "@popperjs/core": "^2.11.8",
     "@rails/actiontext": "^7.2.100",
     "autoprefixer": "^10.4.20",
