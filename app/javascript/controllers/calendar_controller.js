@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import { Calendar } from "@fullcalendar/core"
+import dayGridPlugin from "@fullcalendar/daygrid"
 
 export default class extends Controller {
   static targets = ["conteiner"]
