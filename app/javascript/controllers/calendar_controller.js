@@ -3,7 +3,7 @@ import { Calendar } from "@fullcalendar/core"
 import dayGridPlugin from "@fullcalendar/daygrid"
 
 export default class extends Controller {
-  static targets = ["conteiner"]
+  static targets = ['container']
   static values = {
     events: Array
   }
@@ -16,7 +16,7 @@ export default class extends Controller {
       url: `/events/${item.id}/edit`,
     }));
 
-    this.calendar = new Calendar(this.conteinerTarget, {
+    this.calendar = new Calendar(this.containerTarget, {
       plugins: [dayGridPlugin],
       headerToolbar: {
         left: "prev,next today",
@@ -26,6 +26,6 @@ export default class extends Controller {
       events,
     });
 
-    this.calendar.render()
+    this.calendar.render();
   }
 }
