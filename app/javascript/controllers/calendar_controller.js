@@ -8,9 +8,23 @@ export default class extends Controller {
   }
 
   connect() {
-    new Calendar(this.conteinerTarget, {
-      initialView: "dayGridMonth",
-      events: this.eventsValue
-    })
+    const events = this.eventsValue.map((item) => ({
+      title: item.name,
+      start: item.started_at,
+      end: item.finished_at,
+      url: `/events/${item.id}/edit`,
+    }));
+
+    this.calendar = new Calendar(this.conteinerTarget, {
+      plugins: [dayGridPlugin],
+      headerToolbar: {
+        left: "prev,next today",
+        center: "title",
+        right: "",
+      },
+      events,
+    });
+
+    this.calendar.render()
   }
 }
