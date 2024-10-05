@@ -1,8 +1,16 @@
 import { Controller } from "@hotwired/stimulus"
+import { Calendar } from "@fullcalendar/core"
 
 export default class extends Controller {
   static targets = ["conteiner"]
+  static values = {
+    events: Array
+  }
+
   connect() {
-    this.conteinerTarget.textContent = "Calendar Enabled!"
+    new Calendar(this.conteinerTarget, {
+      initialView: "dayGridMonth",
+      events: this.eventsValue
+    })
   }
 }
