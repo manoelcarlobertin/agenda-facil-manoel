@@ -33,10 +33,18 @@ module AgendaFacil
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
+    config.i18n.default_locale = :'pt-BR'
+    config.time_zone = "Brasilia"
+    config.active_record.default_timezone = :local
+
+    # Fallback to English if translation is missing in Portuguese
+    config.i18n.fallbacks = [ I18n.default_locale ]
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Action Mailer
+    config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
   end
 end

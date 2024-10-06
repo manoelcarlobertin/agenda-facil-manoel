@@ -21,7 +21,10 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", ">= 4.0.1"
 # Views and Controllers
-gem "simple_form"
+gem "simple_form", "~> 5.3"
+gem "solid_queue", "~> 0.3.3"
+gem "view_component", "~> 3.12"
+gem "pagy", "~> 6.1"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -53,4 +56,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
+  # gem "rubocop-shopify", require: false
 end
