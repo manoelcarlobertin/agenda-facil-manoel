@@ -46,5 +46,8 @@ module AgendaFacil
 
     # Action Mailer
     config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
+
+    # ActiveJob Adapter
+    config.active_job.queue_adapter = :solid_queue
   end
 end
