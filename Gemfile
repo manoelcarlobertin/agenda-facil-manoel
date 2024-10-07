@@ -22,7 +22,7 @@ gem "jbuilder"
 gem "redis", ">= 4.0.1"
 # Views and Controllers
 gem "simple_form", "~> 5.3"
-gem "solid_queue", "~> 0.3.3"
+gem "solid_queue", "~> 1.0.0"
 gem "view_component", "~> 3.12"
 gem "pagy", "~> 6.1"
 
