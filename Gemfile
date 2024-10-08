@@ -23,7 +23,7 @@ gem "redis", ">= 4.0.1"
 # Views and Controllers
 gem "simple_form", "~> 5.3"
 gem "solid_queue", "~> 0.3.3"
-gem "view_component", "~> 3.12"
+gem "view_component", "~> 3.17"
 gem "pagy", "~> 6.1"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
