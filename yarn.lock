@@ -4,14 +4,14 @@
 
 "@fullcalendar/core@^6.1.15":
   version "6.1.15"
-  resolved "https://registry.npmjs.org/@fullcalendar/core/-/core-6.1.15.tgz"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-6.1.15.tgz#6c3f5259fc4589870228853072131219bb533f6e"
   integrity sha512-BuX7o6ALpLb84cMw1FCB9/cSgF4JbVO894cjJZ6kP74jzbUZNjtwffwRdA+Id8rrLjT30d/7TrkW90k4zbXB5Q==
   dependencies:
     preact "~10.12.1"
 
 "@fullcalendar/daygrid@^6.1.15":
   version "6.1.15"
-  resolved "https://registry.npmjs.org/@fullcalendar/daygrid/-/daygrid-6.1.15.tgz"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-6.1.15.tgz#91208b0955ba805ddad285a53ee6f53855146963"
   integrity sha512-j8tL0HhfiVsdtOCLfzK2J0RtSkiad3BYYemwQKq512cx6btz6ZZ2RNc/hVnIxluuWFyvx5sXZwoeTJsFSFTEFA==
 
 "@nodelib/fs.scandir@2.1.5":
